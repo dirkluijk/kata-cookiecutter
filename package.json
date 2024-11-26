@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "check-types": "tsc --watch",
+    "test": "vitest",
+    "test:ci": "vitest run --silent --coverage --coverage.reporter=json-summary"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.5"
+  }
+}

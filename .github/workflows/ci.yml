@@ -1,0 +1,31 @@
+name: 'CI'
+
+on: [ push ]
+
+jobs:
+  ci_node:
+    name: "CI on Node.js"
+    strategy:
+      matrix:
+        version: [20, 22, 23]
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Clone repository'
+        uses: actions/checkout@v4
+
+      - name: 'Install Node.js'
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.version }}
+          cache: 'npm'
+
+      - name: 'npm ci'
+        run: npm ci
+
+      - name: 'npm run check-types'
+        run: npm run check-types
+
+      - name: 'npm run test'
+        run: npm run test:ci
