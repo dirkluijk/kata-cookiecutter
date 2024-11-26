@@ -1,8 +1,11 @@
 {
   "scripts": {
-    "check-types": "tsc --watch",
+    "check-types": "tsc",
     "test": "vitest",
     "test:ci": "vitest run --silent --coverage --coverage.reporter=json-summary"
+  },
+  "stackblitz": {
+    "startCommand": "npm run test"
   },
   "devDependencies": {
     "typescript": "^5.7.2",
