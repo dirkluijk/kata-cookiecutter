@@ -3,8 +3,8 @@
 A simple cookiecutter project for doing katas in TypeScript.
 
 Runs on:
-* TypeScript 5.7
-* Vitest 2.1
+* TypeScript 5.8
+* Vitest 3
 
 ## Getting started
 
