@@ -3,6 +3,7 @@
   "scripts": {
     "dev": "tsx watch src/main.ts",
     "check-types": "tsc",
+    "lint": "eslint",
     "test": "vitest",
     "test:ci": "vitest run --silent --coverage --coverage.reporter=json-summary"
   },
